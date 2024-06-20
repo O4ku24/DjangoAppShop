@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop list</title>
+</head>
+<body>
+    <style>
+        .product{
+            text-align: center;
+            border: 2px black solid;
+        }
+    </style>
+    <div class="product">
+        <h1>SHOP LIST</h1>
+        <h2 id="product">{{ Product.product }}</h2>
+        <h4>{{ Product.description }}</h4>
+        <h2>{{ Product.price }}</h2>
+        <button id="btn-bay">Bay</button>
+    </div>
+    <script>
+        const product = document.getElementById('product')
+        const btn_bay = document.getElementById('btn-bay')
+        btn_bay.addEventListener('click', function(){
+            alert('BAY', product.textContent)
+            
+        })
+    </script>
+</body>
+</html>
